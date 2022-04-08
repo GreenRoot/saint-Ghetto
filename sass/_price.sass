@@ -1,0 +1,85 @@
+.prices-wr
+  display: flex
+  justify-content: center
+  align-items: center
+
+.prices
+  display: flex
+  background-color: #2B2831
+  border-radius: 20px
+  width: 1000px
+  padding: 0 10px
+
+.price
+  border-radius: 25px
+  padding: 40px 20px
+  color: #fff
+  transition: .3s ease-out
+.price:hover
+  position: relative
+  transform: translateY(-10px)
+  background-color: #ff5400
+  & .price__btn
+    background-color: #fff
+    color: #ff5400
+  & .price-includes__check-v
+    stroke: #fff
+  & .price__value-small
+    color: #fff
+  & .price__text
+    color: #fff
+  & .price-includes>.price-includes__text
+    color: #fff
+
+.price__value
+  display: flex
+  align-items: center
+  font-size: 28px
+  font-weight: bold
+  padding-bottom: 40px
+  &-small
+    display: inline-block
+    margin-left: 15px
+    font-size: 16px
+    color: #ccc
+    font-weight: normal
+
+.price__quantity
+  font-size: 20px
+  font-weight: bold
+  padding-bottom: 20px
+
+.price__text
+  font-size: 12px
+  color: #ccc
+  padding-bottom: 20px
+
+.price__btn
+  display: flex
+  justify-content: center
+  width: 100%
+  padding: 10px 0
+  background-color: #3f3b46
+  border-radius: 25px
+
+.price-includes-wr
+  display: flex
+  flex-direction: column
+  padding-bottom: 20px
+
+.price-includes
+  display: flex
+  align-items: center
+  margin-bottom: 5px
+
+.price-includes__check
+  margin-right: 15px
+  height: 18px
+  &-v
+    stroke: #ff5400
+  & svg
+    height: 100%
+
+.price-includes__text
+  font-size: 12px
+  color: #ccc

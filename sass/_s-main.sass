@@ -1,0 +1,41 @@
+.main
+  /*min-height: calc(100vh - 77px)*/
+  background-color: #000
+
+.main-wr
+  height: 540px
+  display: grid
+  grid-auto-flow: column
+  justify-content: space-between
+
+.main-left
+  display: grid
+  align-content: center
+  grid-gap: 40px
+
+.main-title
+  color: #fff
+  font-size: 48px
+  font-weight: bold
+.main-subtitle
+  color: #fff
+  font-size: 18px
+  font-weight: normal
+
+.main-right__img
+  position: relative
+  border-radius: 0 30px 30px 0
+  overflow: hidden
+
+.main-right__img:before
+  content: ''
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 20%)
+
+.main-selection
+  background-color: #FF5400
+  border-radius: 20px
+  padding: 0 10px
