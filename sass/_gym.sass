@@ -1,7 +1,7 @@
 .gym-wr
   display: grid
-  grid-template-columns: 1fr 1fr 1fr 1fr
-  grid-template-rows: 200px 200px 200px
+  grid-template-columns: 25% 25% 25% 25%
+  grid-template-rows: 200px 200px 250px
   grid-template-areas: 'gym-1 gym-2 gym-3 gym-4' 'gym-1 gym-5 gym-5 gym-6' 'gym-7 gym-8 gym-9 gym-9'
   width: 100%
   min-height: 200px
@@ -13,16 +13,50 @@
   background-color: #f1f6f9
   color: #1E1E1E
   padding: 20px
+  overflow: hidden
+
 
 .gym-black
   background-color: #2B2831
   color: #fff
 
 .gym__title
-  font-size: 24px
-  font-weight: 600
-  text-align: center
+  font-size: 22px
+  padding-bottom: 10px
+  font-weight: 800
   cursor: default
   user-select: none
+  text-align: center
+  width: 0
+  transition: .5s ease
+
+.gym__img
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100%
+  height: calc(100% - 30px)
+  & img
+    position: absolute
+    height: 100%
+    max-width: 100%
+    object-fit: contain
+    transition: .5s ease
+
+.gym__img-text
+  position: absolute
+  transform: translateY(250px)
+  transition: .5s ease
+
+.gym:hover .gym__title
+  width: 100%
+
+.gym:hover .gym__img .gym__img-text
+  transform: translateY(0%)
+
+.gym:hover .gym__img img
+  opacity: 0
+
 
 
