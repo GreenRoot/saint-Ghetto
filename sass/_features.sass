@@ -4,15 +4,19 @@
   grid-gap: 20px
 
 .feature
-  display: flex
-  justify-content: center
+  display: grid
+  grid-gap: 20px
+  grid-template-rows: 86px 57px 40px
   align-items: center
-  flex-direction: column
-  gap: 20px
-  height: 260px
   background-color: #fff
   border-radius: 20px
   padding: 20px
+
+.feature__img
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100%
 
 .feature__img svg
   height: 100%

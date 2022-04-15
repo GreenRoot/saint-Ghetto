@@ -24,4 +24,21 @@ gsap.to(".message-2", {y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDela
 gsap.to(".message-3", {y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 4});
 
 //
-gsap.registerPlugin(DrawSVGPlugin);
+// gsap.registerPlugin(DrawSVGPlugin);
+
+
+// Табы видов тренировок
+
+const trainingImg = document.getElementsByClassName('training-img')
+const trainingTitle = document.getElementsByClassName('training-list__item')
+
+for(let i = 0; i < trainingTitle.length; i++) {
+	trainingTitle[i].addEventListener('click', () => {
+		for(let i = 0; i < trainingTitle.length; i++) {
+			trainingTitle[i].classList.remove('active')
+			trainingImg[i].style.display = 'none'
+		}
+		trainingTitle[i].classList.add('active')
+		trainingImg[i].style.display = 'block'
+	})
+}
