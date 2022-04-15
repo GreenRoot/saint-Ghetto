@@ -77,6 +77,10 @@ a {
   justify-content: center;
   align-items: center;
   margin-right: 10px;
+  width: 20px;
+}
+.button__pre img {
+  width: 100%;
 }
 
 .button__body {
@@ -486,6 +490,43 @@ a {
   height: 10px;
   border-radius: 50%;
   background-color: #FF5400CC;
+}
+
+.address {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+}
+.contacts__item {
+  height: 30px;
+  margin-bottom: 10px;
+}
+.contacts__item .button__body {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.map {
+  border-radius: 25px;
+  width: 500px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.footer {
+  color: #fff;
+  background-color: #000;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
