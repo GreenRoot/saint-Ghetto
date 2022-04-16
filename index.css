@@ -208,7 +208,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .feature__img svg {
@@ -409,6 +408,50 @@ a {
 
 .gym:hover .gym__img img {
   opacity: 0;
+}
+
+.partners-wr {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 60px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.partner {
+  position: relative;
+  overflow: hidden;
+}
+
+.partner__desc {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #222;
+  font-weight: 700;
+  font-size: 18px;
+  transform: translateY(100%);
+  background-color: rgba(255, 255, 255, 0.98);
+  transition: 0.3s;
+}
+
+.partner:hover .partner__desc {
+  transform: translateY(0);
+}
+
+.partner__link {
+  height: 80px;
+}
+.partner__link img {
+  height: 100%;
 }
 
 .training {
