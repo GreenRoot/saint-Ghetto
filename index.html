@@ -9,6 +9,7 @@
 </head>
 <body>
 
+<!--Header-->
 <header class="header pb30">
 	<div class="container">
 		<div class="header-wr">
@@ -51,6 +52,8 @@
 		</div>
 	</div>
 </header>
+
+<!--Твоя Фитнес-студия-->
 <main class="main p60">
 	<div class="container">
 		<div class="main-wr">
@@ -59,7 +62,7 @@
 					Твоя <br> Фитнес-студия
 				</h2>
 				<h3 class="main-subtitle">
-					Плати <span class="main-selection">только за время</span> <br> Занимайся спортом рядом с домом <br> Один или с
+					Плати <span class="main-selection">только за время</span><br>Занимайся спортом рядом с домом<br>Один или с
 					тренером
 				</h3>
 				<a target="_blank" href="https://n725762.yclients.com/" class="button button-main">
@@ -69,12 +72,18 @@
 			</div>
 			<div class="main-right">
 				<div class="main-right__img">
-					<img src="img/main.jpg" loading="lazy" alt="Индивидуальная Фитнес-студия">
+					<picture>
+						<source type="image/avif" srcset="img/main.avif">
+						<source type="image/webp" srcset="img/main.webp">
+						<img loading="lazy" src="img/main.jpg" srcset="img/q1-pear@2x.png 2x" alt="Индивидуальная Фитнес-студия">
+					</picture>
 				</div>
 			</div>
 		</div>
 	</div>
 </main>
+
+<!--Преимущества-->
 <section class="section p60">
 	<div class="container">
 		<h2 class="title pb30">Преимущества</h2>
@@ -181,6 +190,8 @@
 		</div>
 	</div>
 </section>
+
+<!--Цены на аренду зала-->
 <section class="section p60">
 	<div class="container">
 		<h2 class="title title-in-dev pb30">Цены на аренду зала</h2>
@@ -423,6 +434,8 @@
 		</a>
 	</div>
 </section>
+
+<!--Что есть в зале-->
 <section class="section section-white p60">
 	<div class="container">
 		<h2 class="title title-white title-in-dev pb30">Что есть в зале</h2>
@@ -431,71 +444,109 @@
 			<div class="gym gym-black" style="grid-area: gym-1">
 				<h3 class="gym__title">Груша</h3>
 				<div class="gym__img">
-					<img src="img/q1.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q1-pear@1x.avif 1x, img/q1-pear@2x.avif 2x">
+						<source type="image/webp" srcset="img/q1-pear@1x.webp 1x, img/q1-pear@2x.webp 2x">
+						<img loading="lazy" src="img/q1-pear@1x.png" srcset="img/q1-pear@2x.png 2x" alt="Груша">
+					</picture>
 					<div class="gym__img-text">Поможет отработать удары из стойки, укрепит кисти рук и увеличит силу удара</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-2">
 				<h3 class="gym__title">Силовая&nbsp;рама</h3>
 				<div class="gym__img">
-					<img src="img/q2.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q2-powerframe@1x.avif 1x, img/q2-powerframe@2x.avif 2x">
+						<source type="image/webp" srcset="img/q2-powerframe@1x.webp 1x, img/q2-powerframe@2x.webp 2x">
+						<img loading="lazy" src="img/q2-powerframe@1x.png" srcset="img/q2-powerframe@2x.png 2x" alt="Силовая рама">
+					</picture>
 					<div class="gym__img-text">Прокачайте мышцы бицепса, груди и большие мышцы ног</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-3">
 				<h3 class="gym__title">Гантели</h3>
 				<div class="gym__img">
-					<img src="img/q3.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q3-dumbbells@1x.avif 1x, img/q3-dumbbells@2x.avif 2x">
+						<source type="image/webp" srcset="img/q3-dumbbells@1x.webp 1x, img/q3-dumbbells@2x.webp 2x">
+						<img loading="lazy" src="img/q3-dumbbells@1x.png" srcset="img/q3-dumbbells@2x.png 2x" alt="Гантели">
+					</picture>
 					<div class="gym__img-text">Регулируйте нагрузку для эффективной тренировки рук</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-4">
 				<h3 class="gym__title">Гири</h3>
 				<div class="gym__img">
-					<img src="img/q4.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q4-kettlebells@1x.avif 1x, img/q4-kettlebells@2x.avif 2x">
+						<source type="image/webp" srcset="img/q4-kettlebells@1x.webp 1x, img/q4-kettlebells@2x.webp 2x">
+						<img loading="lazy" src="img/q4-kettlebells@1x.png" srcset="img/q4-kettlebells@2x.png 2x" alt="Гири">
+					</picture>
 					<div class="gym__img-text">Просто крутой тренажёр, если правильно им пользоваться ))</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-5">
 				<h3 class="gym__title">Беговая&nbsp;дорожка</h3>
 				<div class="gym__img">
-					<img src="img/q5.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q5-treadmill@1x.avif 1x, img/q5-treadmill@2x.avif 2x">
+						<source type="image/webp" srcset="img/q5-treadmill@1x.webp 1x, img/q5-treadmill@2x.webp 2x">
+						<img loading="lazy" src="img/q5-treadmill@1x.png" srcset="img/q5-treadmill@2x.png 2x" alt="Беговая дорожка">
+					</picture>
 					<div class="gym__img-text">Перед тренировкой советуем разогреться и привести пульс в рабочую частоту</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-6">
 				<h3 class="gym__title">Петли</h3>
 				<div class="gym__img">
-					<img src="img/q6.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q6-loops@1x.avif 1x, img/q6-loops@2x.avif 2x">
+						<source type="image/webp" srcset="img/q6-loops@1x.webp 1x, img/q6-loops@2x.webp 2x">
+						<img loading="lazy" src="img/q6-loops@1x.png" srcset="img/q6-loops@2x.png 2x" alt="Петли">
+					</picture>
 					<div class="gym__img-text">Ещё один крутой инструмент для прокачки тела</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-7">
 				<h3 class="gym__title">Степы</h3>
 				<div class="gym__img">
-					<img src="img/q7.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q7-step@1x.avif 1x, img/q7-step@2x.avif 2x">
+						<source type="image/webp" srcset="img/q7-step@1x.webp 1x, img/q7-step@2x.webp 2x">
+						<img loading="lazy" src="img/q7-step@1x.png" srcset="img/q7-step@2x.png 2x" alt="Степы">
+					</picture>
 					<div class="gym__img-text">Помогают прокачать икры ног. Так же повышают выносливось спортсмена</div>
 				</div>
 			</div>
 			<div class="gym" style="grid-area: gym-8">
-				<h3 class="gym__title">Музыкальная колонка</h3>
+				<h3 class="gym__title gym__title-mb-20">Музыкальная колонка</h3>
 				<div class="gym__img">
-					<img src="img/q8.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q8-music@1x.avif 1x, img/q8-music@2x.avif 2x">
+						<source type="image/webp" srcset="img/q8-music@1x.webp 1x, img/q8-music@2x.webp 2x">
+						<img loading="lazy" src="img/q8-music@1x.png" srcset="img/q8-music@2x.png 2x" alt="Музыкальная колонка">
+					</picture>
 					<div class="gym__img-text">Правильно подобранная музыка поднимет настрой на тяжёлую тренировку или наоборот,
 						поможет расслабиться
 					</div>
 				</div>
 			</div>
 			<div class="gym gym-black" style="grid-area: gym-9">
-				<h3 class="gym__title">Инвентарь&nbsp;для&nbsp;групповых&nbsp;тренировок</h3>
+				<h3 class="gym__title gym__title-mb-20">Инвентарь&nbsp;для групповых&nbsp;тренировок</h3>
 				<div class="gym__img">
-					<img src="img/q2.png" alt="">
+					<picture>
+						<source type="image/avif" srcset="img/q2-powerframe@1x.avif 1x, img/q2-powerframe@2x.avif 2x">
+						<source type="image/webp" srcset="img/q2-powerframe@1x.webp 1x, img/q2-powerframe@2x.webp 2x">
+						<img loading="lazy" src="img/q2-powerframe@1x.png" srcset="img/q2-powerframe@2x.png 2x" alt="Инвентарь для групповых тренировок">
+					</picture>
 					<div class="gym__img-text">Эта карточка пока в разработке</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!--Виды тренировок-->
 <section class="section section-white p60">
 	<div class="container">
 		<h2 class="title title-white title-in-dev pb30">Виды тренировок</h2>
@@ -504,7 +555,11 @@
 			<div class="training__images">
 				<div style="display: block" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w1.jpg" alt="Индивидуальные тренировки" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w1.avif">
+						<source type="image/webp" srcset="img/w1.webp">
+						<img class="training-img__item" loading="lazy" src="img/w1.jpg" alt="Индивидуальные тренировки">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -512,7 +567,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w2.jpg" alt="Групповые" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w2.avif">
+						<source type="image/webp" srcset="img/w2.webp">
+						<img class="training-img__item" loading="lazy" src="img/w2.jpg" alt="Групповые">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -520,7 +579,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w3.jpg" alt="RTX" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w3.avif">
+						<source type="image/webp" srcset="img/w3.webp">
+						<img class="training-img__item" loading="lazy" src="img/w3.jpg" alt="RTX">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -528,7 +591,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w4.jpg" alt="Бокс" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w4.avif">
+						<source type="image/webp" srcset="img/w4.webp">
+						<img class="training-img__item" loading="lazy" src="img/w4.jpg" alt="Бокс">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -536,7 +603,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w5.jpg" alt="Йога" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w5.avif">
+						<source type="image/webp" srcset="img/w5.webp">
+						<img class="training-img__item" loading="lazy" src="img/w5.jpg" alt="Йога">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -544,7 +615,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w6.jpg" alt="Пилатес" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w6.avif">
+						<source type="image/webp" srcset="img/w6.webp">
+						<img class="training-img__item" loading="lazy" src="img/w6.jpg" alt="Пилатес">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -552,7 +627,11 @@
 				</div>
 				<div style="display: none" class="training-img">
 					<div class="training-img__text">Простое описание тренировки и преимуществ</div>
-					<img src="img/w7.jpg" alt="Стретчинг" loading="lazy" class="training-img__item">
+					<picture>
+						<source type="image/avif" srcset="img/w7.avif">
+						<source type="image/webp" srcset="img/w7.webp">
+						<img class="training-img__item" loading="lazy" src="img/w7.jpg" alt="Стретчинг">
+					</picture>
 					<div title="При наведении на карточку можно прочитать дополнительный текст" class="training-img__hover-dot">
 						<div class="training-img__hover-dot-1"></div>
 						<div class="training-img__hover-dot-2"></div>
@@ -571,22 +650,38 @@
 		</div>
 	</div>
 </section>
+
+<!--Партнёры-->
 <section class="section section-white p60">
 	<div class="container">
 		<h2 class="title title-white title-in-dev pb30">Партнёры</h2>
 		<h3 class="subtitle subtitle-white pb30">Наши партнёры</h3>
 		<div class="partners-wr">
-			<a href="https://afnutrition.pro/" class="partner">
+			<a target="_blank" href="https://afnutrition.pro/" class="partner">
 				<div class="partner__desc">Магазин&nbsp;спортивного питания</div>
-				<div class="partner__img"><img src="img/alexfedorov.jpg" alt="Партнёр Alex Fedorov"></div>
+				<div class="partner__img">
+					<picture>
+						<source type="image/avif" srcset="img/alexfedorov.avif">
+						<source type="image/webp" srcset="img/alexfedorov.webp">
+						<img loading="lazy" src="img/alexfedorov.jpg" alt="Партнёр Alex Fedorov">
+					</picture>
+				</div>
 			</a>
-			<a href="https://fitfil.ru/" class="partner">
+			<a target="_blank" href="https://fitfil.ru/" class="partner">
 				<div class="partner__desc">Магазин&nbsp;спортивного инвентаря</div>
-				<div class="partner__img"><img src="img/fitfil.jpg" alt="Партнёр FitFil"></div>
+				<div class="partner__img">
+					<picture>
+						<source type="image/avif" srcset="img/fitfil.avif">
+						<source type="image/webp" srcset="img/fitfil.webp">
+						<img loading="lazy" src="img/fitfil.jpg" alt="Партнёр FitFil">
+					</picture>
+				</div>
 			</a>
 		</div>
 	</div>
 </section>
+
+<!--Тренеры-->
 <section class="section p60">
 	<div class="container">
 		<h2 class="title title-in-dev pb30">Тренеры</h2>
@@ -605,12 +700,18 @@
 			</div>
 			<div class="main-right">
 				<div class="main-right__img">
-					<img src="img/main1.jpg" loading="lazy" alt="Ищем тренера">
+					<picture>
+						<source type="image/avif" srcset="img/coach.avif">
+						<source type="image/webp" srcset="img/coach.webp">
+						<img loading="lazy" src="img/coach.jpg" alt="Тренер">
+					</picture>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
+
+<!--Как пройти-->
 <article class="section p60">
 	<div class="container">
 		<h2 class="title pb30">Как пройти</h2>
@@ -663,6 +764,8 @@
 
 	</div>
 </article>
+
+<!--Footer-->
 <footer class="footer pb30">
 	<div class="container">
 		<div class="footer__content">

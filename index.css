@@ -8,6 +8,11 @@
   --text-font: "Montserrat", sans-serif;
 }
 
+::selection {
+  background: #ff5400;
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -159,18 +164,21 @@ a {
   color: #fff;
   font-size: 40px;
   font-weight: bold;
+  cursor: default;
 }
 
 .main-subtitle {
   color: #ddd;
   font-size: 18px;
   font-weight: normal;
+  cursor: default;
 }
 
 .main-right__img {
   position: relative;
   border-radius: 0 30px 30px 0;
   overflow: hidden;
+  user-select: none;
 }
 
 .main-right__img:before {
@@ -344,19 +352,20 @@ a {
 
 .gym-wr {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 200px 200px 250px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 200px 200px 200px;
   grid-template-areas: "gym-1 gym-2 gym-3 gym-4" "gym-1 gym-5 gym-5 gym-6" "gym-7 gym-8 gym-9 gym-9";
   width: 100%;
   min-height: 200px;
-  grid-gap: 20px;
+  grid-gap: 10px;
+  user-select: none;
 }
 
 .gym {
   border-radius: 20px;
   background-color: #f1f6f9;
   color: #1E1E1E;
-  padding: 20px;
+  padding: 10px 20px;
   overflow: hidden;
 }
 
@@ -376,6 +385,10 @@ a {
   transition: 0.5s ease;
 }
 
+.gym__title-mb-20 {
+  margin-bottom: -20px;
+}
+
 .gym__img {
   position: relative;
   display: flex;
@@ -385,7 +398,6 @@ a {
   height: calc(100% - 30px);
 }
 .gym__img img {
-  position: absolute;
   height: 100%;
   max-width: 100%;
   object-fit: contain;
@@ -396,6 +408,7 @@ a {
   position: absolute;
   transform: translateY(250px);
   transition: 0.5s ease;
+  cursor: default;
 }
 
 .gym:hover .gym__title {
@@ -417,6 +430,7 @@ a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  user-select: none;
 }
 
 .partner {
@@ -460,6 +474,7 @@ a {
   grid-gap: 20px;
   grid-template-columns: 600px 1fr;
   align-items: center;
+  user-select: none;
 }
 
 .training-img {
@@ -595,6 +610,7 @@ a {
   font-size: 40px;
   font-weight: bold;
   color: #fff;
+  cursor: default;
 }
 
 .title-white {
