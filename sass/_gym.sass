@@ -29,6 +29,19 @@
   width: 0
   transition: .5s ease
 
+.gym__title-soon
+  position: relative
+  &:after
+    position: absolute
+    content: 'Скоро'
+    padding: 5px 15px
+    background-color: #ff5400
+    color: #fff
+    border-radius: 10px
+    font-size: 12px
+    font-weight: normal
+
+
 .gym__title-mb-20
   margin-bottom: -20px
 
@@ -53,6 +66,9 @@
 
 .gym:hover .gym__title
   width: 100%
+
+.gym:hover .gym__title-soon:after
+  margin-left: 10px
 
 .gym:hover .gym__img .gym__img-text
   transform: translateY(0%)

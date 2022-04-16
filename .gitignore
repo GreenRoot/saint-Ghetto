@@ -1,3 +1,7 @@
+#css and cdd.map
+*.css
+*.css.map
+
 # Parcel
 .parcel-cache
 
