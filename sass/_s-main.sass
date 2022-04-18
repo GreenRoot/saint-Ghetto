@@ -1,17 +1,36 @@
 .main
-  /*min-height: calc(100vh - 77px)*/
   background-color: #000
+  padding-bottom: 60px
+  padding-top: 60px
+  @media (max-width: 991.5px)
+    padding-top: 0
+    padding-bottom: 30px
+  @media (max-width: 499.5px)
+    height: 100vh
 
 .main-wr
   height: 540px
-  display: grid
-  grid-auto-flow: column
+  display: flex
   justify-content: space-between
+  @media (max-width: 991.5px)
+    position: relative
+    flex-flow: row-reverse
+  @media (max-width: 499.5px)
+    height: 100vh
 
 .main-left
   display: grid
   align-content: center
   grid-gap: 40px
+  @media (max-width: 991.5px)
+    position: absolute
+    left: 0
+    bottom: 100px
+    z-index: 1
+  @media (max-width: 499.5px)
+    width: 100%
+    background-color: black
+    box-shadow: 0 0 20px 50px black
 
 .main-title
   font-family: var(--title-font)
@@ -19,19 +38,35 @@
   word-spacing: 0
   color: #fff
   font-size: 40px
-  font-weight: bold
+  font-weight: 800
   cursor: default
+  @media (max-width: 450.5px)
+    font-size: 34px
+  @media (max-width: 450.5px)
+    font-size: 28px
+  @media (max-width: 345.5px)
+    font-size: 24px
+
 .main-subtitle
   color: #ddd
   font-size: 18px
-  font-weight: normal
+  font-weight: 400
   cursor: default
+  @media (max-width: 450.5px)
+    font-size: 14px
+
+.main-right
+  @media (max-width: 991.5px)
+    position: relative
+    right: -15px
 
 .main-right__img
   position: relative
   border-radius: 0 30px 30px 0
   overflow: hidden
   user-select: none
+  @media (max-width: 991.5px)
+    border-radius: 0
 
 .main-right__img:before
   content: ''

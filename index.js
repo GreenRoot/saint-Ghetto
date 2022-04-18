@@ -42,3 +42,101 @@ for(let i = 0; i < trainingTitle.length; i++) {
 		trainingImg[i].style.display = 'block'
 	})
 }
+
+// Анимация цен на услуги
+const price = document.getElementsByClassName('price')
+
+const removePriceHover = () => {
+	for(let i = 0; i < price.length; i++) {
+		price[i].classList.remove('price-hover')
+	}
+}
+
+for(let i = 0; i < price.length; i++) {
+	price[i].addEventListener('click', () => {
+		removePriceHover()
+		price[i].classList.add('price-hover')
+	})
+}
+// свайпы
+// Вешаем на прикосновение функцию handleTouchStart
+document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart, false);
+// А на движение пальцем по экрану - handleTouchMove
+document.getElementsByClassName('prices')[0].addEventListener('touchmove', handleTouchMove, false);
+
+let xDown = null;
+let yDown = null;
+
+function handleTouchStart(evt) {
+	xDown = evt.touches[0].clientX;
+	yDown = evt.touches[0].clientY;
+}
+
+function handleTouchMove(evt) {
+	if ( ! xDown || ! yDown ) {
+		return;
+	}
+
+	let xUp = evt.touches[0].clientX;
+	let yUp = evt.touches[0].clientY;
+
+	let xDiff = xDown - xUp;
+	let yDiff = yDown - yUp;
+	// немного поясню здесь. Тут берутся модули движения по оси абсцисс и ординат
+	// (почему модули? потому что если движение сделано влево или вниз,
+	// то его показатель будет отрицательным) и сравнивается, чего было больше:
+	// движения по абсциссам или ординатам. Нужно это для того, чтобы, если пользователь провел вправо,
+	// но немного наискосок вниз, сработал именно коллбэк для движения вправо, а ни как-то иначе.
+
+	if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
+		let priceHover = document.getElementsByClassName('price-hover')
+		if ( xDiff > 0 ) {
+			if (priceHover.length === 0) {
+				price[price.length - 2].classList.add('price-hover')
+			} else if (price[0].classList.contains('price-hover')) {
+				price[0].classList.remove('price-hover')
+				price[1].classList.add('price-hover')
+			} else if (price[1].classList.contains('price-hover')) {
+				price[1].classList.remove('price-hover')
+				price[2].classList.add('price-hover')
+			} else if (price[2].classList.contains('price-hover')) {
+				price[2].classList.remove('price-hover')
+				price[3].classList.add('price-hover')
+			} else if (price[3].classList.contains('price-hover')) {
+				price[3].classList.remove('price-hover')
+				price[0].classList.add('price-hover')
+			}
+			/* left swipe */
+		} else {
+			if (priceHover.length === 0) {
+				price[0].classList.add('price-hover')
+			} else if (price[3].classList.contains('price-hover')) {
+				price[3].classList.remove('price-hover')
+				price[2].classList.add('price-hover')
+			} else if (price[2].classList.contains('price-hover')) {
+				price[2].classList.remove('price-hover')
+				price[1].classList.add('price-hover')
+			} else if (price[1].classList.contains('price-hover')) {
+				price[1].classList.remove('price-hover')
+				price[0].classList.add('price-hover')
+			} else if (price[0].classList.contains('price-hover')) {
+				price[0].classList.remove('price-hover')
+				price[3].classList.add('price-hover')
+			}
+			/* right swipe */
+		}
+	}
+	/* reset values */
+	xDown = null;
+	yDown = null;
+}
+
+//анимация мобильного меню
+const list = document.querySelectorAll('.mobile-menu__list')
+function activeLink() {
+	list.forEach((item) =>
+	item.classList.remove('active'));
+	this.classList.add('active');
+}
+list.forEach((item) =>
+item.addEventListener('click', activeLink))

@@ -16,33 +16,27 @@
   letter-spacing: 5px
   word-spacing: 0
   font-size: 40px
-  font-weight: bold
+  font-weight: 800
   color: #fff
   cursor: default
+  @media (max-width: 991.5px)
+    text-align: center
+  @media (max-width: 659.5px)
+    font-size: 36px
+  @media (max-width: 400.5px)
+    font-size: 28px
 
 .title-white
   color: #222
-
-.title-in-dev
-  position: relative
-  &:after
-    position: absolute
-    content: 'В разработке'
-    color: #fff
-    font-family: var(--text-font)
-    font-weight: normal
-    font-style: normal
-    letter-spacing: 0
-    display: inline-block
-    padding: 3px 10px
-    font-size: 10px
-    background-color: #ff5400
-    border-radius: 10px
 
 .subtitle
   font-size: 16px
   font-weight: normal
   color: #bbb
+  @media (max-width: 991.5px)
+    text-align: center
+  @media (max-width: 400.5px)
+    font-size: 14px
 
 .subtitle-white
   color: #222
@@ -53,18 +47,10 @@
 .social-1m, .social-2m, .social-3m
   opacity: 0
 
-.temp-subtitle
-  font-size: 24px
-  font-weight: bold
-  color: #fff
-  &-white
-    color: #222
+.temp-none
+  @media(max-width: 991.5px)
+    display: none
 
-.temp-green-text
-  font-size: 20px
-  display: inline-block
-  padding: 1px 15px
-  margin: 5px 0
-  border-radius: 20px
-  color: #fff
-  background-color: #15A250
+.price-p0
+  @media (max-width: 991.5px)
+    padding: 0

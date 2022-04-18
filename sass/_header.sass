@@ -1,11 +1,27 @@
 .header
   background-color: #000
   padding-top: 15px
+  @media (max-width: 991.5px)
+    position: absolute
+    top: 0
+    width: 100%
+    background-color: transparent
+    z-index: 1
+
+.header-secondary
+  @media (max-width: 991.5px)
+    display: none
+
+.header-phone
+  @media (max-width: 559.5px)
+    display: none
 
 .header-wr
   display: flex
   justify-content: space-between
   align-items: center
+  @media (max-width: 369.5px)
+    justify-content: center
 
 .header-left, .header-right
   display: grid
@@ -13,7 +29,19 @@
   grid-gap: 30px
   align-items: center
 
+.header-left
+  @media (max-width: 369.5px)
+    display: none
+
 .logo
   display: flex
   justify-content: center
   align-items: center
+
+.sign-up
+  @media (max-width: 369.5px)
+    font-size: 16px
+  &__full
+    display: none
+    @media (max-width: 369.5px)
+      display: inline

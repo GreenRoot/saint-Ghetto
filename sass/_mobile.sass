@@ -1,0 +1,110 @@
+.mobile-header
+  display: none
+  @media (max-width: 991.5px)
+    position: fixed
+    bottom: 29px
+    left: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    width: calc((70px * 5) + 12px)
+    height: 82px
+    background-color: #000
+    z-index: 10
+    border: 6px solid #fff
+    border-radius: 35px
+    transform: translateX(-50%)
+.mobile-nav
+  display: none
+  @media (max-width: 991.5px)
+    position: fixed
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 70px
+    background-color: #fff
+    z-index: 10
+
+.mobile-menu
+  display: flex
+  width: 350px
+
+.mobile-menu__list
+  position: relative
+  list-style: none
+  width: 70px
+  height: 70px
+  z-index: 10
+
+.mobile-menu__link
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  width: 100%
+  text-align: center
+  user-select: none
+  -webkit-tap-highlight-color: transparent
+
+.mobile-menu__icon
+  position: relative
+  display: block
+  line-height: 75px
+  font-size: 1.5rem
+  text-align: center
+  transition: .5s ease-out
+  & svg
+    height: 25px
+  & svg path
+    fill: black
+    transition: fill .4s ease
+
+.mobile-menu__list.active svg path
+  fill: white
+
+.mobile-menu__list.active .mobile-menu__icon
+  transform: translateY(-35px)
+
+.mobile-menu__text
+  position: absolute
+  color: #000
+  font-weight: 400
+  font-size: 0.75em
+  letter-spacing: .05em
+  transition: .5s
+  transform: translateY(20px)
+  opacity: 0
+
+.mobile-menu__list.active .mobile-menu__text
+  transform: translateY(10px)
+  opacity: 1
+
+.mobile-menu__indicator
+  position: absolute
+  top: -50%
+  width: 70px
+  height: 70px
+  list-style: none
+  background-color: #ff5400
+  border-radius: 50%
+  border: 6px solid #000
+  transition: .5s ease-out
+
+.mobile-menu__list:nth-child(1).active ~ .mobile-menu__indicator
+  transform: translateX(calc(70px * 0))
+
+.mobile-menu__list:nth-child(2).active ~ .mobile-menu__indicator
+  transform: translateX(calc(70px * 1))
+
+.mobile-menu__list:nth-child(3).active ~ .mobile-menu__indicator
+  transform: translateX(calc(70px * 2))
+
+.mobile-menu__list:nth-child(4).active ~ .mobile-menu__indicator
+  transform: translateX(calc(70px * 3))
+
+.mobile-menu__list:nth-child(5).active ~ .mobile-menu__indicator
+  transform: translateX(calc(70px * 4))
+

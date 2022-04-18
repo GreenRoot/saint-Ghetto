@@ -1,6 +1,7 @@
 @font-face
   font-family: 'laser84'
   src: url(fonts/laser84.ttf)
+  font-display: swap
 
 \:root
   --title-font: 'laser84', sans-serif
@@ -13,6 +14,9 @@
   margin: 0
   padding: 0
   box-sizing: border-box
+
+html
+  scroll-behavior: smooth
 
 body
   font-family: var(--text-font)
@@ -28,6 +32,11 @@ a
 .p60
   padding-bottom: 60px
   padding-top: 60px
+  @media (max-width: 991.5px)
+    padding-bottom: 20px
+    padding-top: 20px
 
 .height90
   min-height: 90vh
+
+

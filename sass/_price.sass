@@ -2,51 +2,69 @@
   display: flex
   justify-content: center
   align-items: center
+  @media (max-width: 991.5px)
+    overflow-x: hidden
 
 .prices
   display: flex
   background-color: #2B2831
   border-radius: 20px
   width: 1000px
-  padding: 0 10px
+  padding: 15px 0
+  overflow-x: hidden
+  @media (max-width: 991.5px)
+    background-color: transparent
 
 .price
   border-radius: 25px
   padding: 40px 20px
   color: #fff
   transition: .3s ease-out
-.price:hover
-  position: relative
-  transform: translateY(-10px)
-  background-color: #ff5400
-  & .price__btn
-    background-color: #fff
-    color: #ff5400
-  & .price-includes__check-v
-    stroke: #fff
-  & .price__value-small
-    color: #fff
-  & .price__text
-    color: #fff
-  & .price-includes>.price-includes__text
-    color: #fff
+  @media (max-width: 991.5px)
+    background-color: #2B2831
+    box-shadow: -1rem 0 3rem #000
+    &:not(:first-child)
+      margin-left: -150px
+    &.price-hover
+      transform: translate(0, -15px)
+    &.price-hover ~ .price
+      transform: translateX(150px)
+
+@media (min-width: 991.5px)
+  .price:hover
+    position: relative
+    transform: translateY(-10px)
+    background-color: #ff5400
+    & .price__btn
+      background-color: #fff
+      color: #ff5400
+    & .price-includes__check-v
+      stroke: #fff
+    & .price__value-small
+      color: #fff
+    & .price__text
+      color: #fff
+    & .price-includes>.price-includes__text
+      color: #fff
+
+
 
 .price__value
   display: flex
   align-items: center
   font-size: 28px
-  font-weight: bold
+  font-weight: 800
   padding-bottom: 40px
   &-small
     display: inline-block
     margin-left: 15px
     font-size: 16px
     color: #ccc
-    font-weight: normal
+    font-weight: 400
 
 .price__quantity
   font-size: 20px
-  font-weight: bold
+  font-weight: 800
   padding-bottom: 20px
 
 .price__text
