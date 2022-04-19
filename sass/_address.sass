@@ -1,12 +1,19 @@
 .address
   display: flex
   justify-content: space-between
+  @media (max-width: 839.5px)
+    flex-direction: column-reverse
+    justify-content: center
+    align-items: center
 
 .contacts
   display: flex
   flex-direction: column
   justify-content: center
   height: 400px
+  @media (max-width: 839.5px)
+    padding: 30px 0
+    height: auto
   &__item
     height: 30px
     margin-bottom: 10px
@@ -19,3 +26,8 @@
   width: 500px
   height: 400px
   overflow: hidden
+  @media (max-width: 549.5px)
+    display: flex
+    justify-content: center
+    width: 100%
+
