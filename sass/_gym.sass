@@ -1,12 +1,20 @@
 .gym-wr
   display: grid
   grid-template-columns: repeat(4, 1fr)
-  grid-template-rows: 200px 200px 200px
+  grid-template-rows: repeat(3, 200px)
   grid-template-areas: 'gym-1 gym-2 gym-3 gym-4' 'gym-1 gym-5 gym-5 gym-6' 'gym-7 gym-8 gym-9 gym-9'
   width: 100%
   min-height: 200px
   grid-gap: 10px
   user-select: none
+  @media (max-width: 991.5px)
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(4, 200px)
+    grid-template-areas: 'gym-1 gym-2 gym-3' 'gym-1 gym-5 gym-5' 'gym-4 gym-6 gym-7' 'gym-8 gym-9 gym-9'
+  @media (max-width: 677.5px)
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(5, 200px)
+    grid-template-areas: 'gym-1 gym-2' 'gym-1 gym-3' 'gym-5 gym-5' 'gym-4 gym-6' 'gym-9 gym-9' 'gym-7 gym-8'
 
 .gym
   border-radius: 20px
@@ -28,6 +36,8 @@
   text-align: center
   width: 0
   transition: .5s ease
+  @media (max-width: 449.5px)
+    font-size: 17px
 
 .gym__title-soon
   position: relative
@@ -40,7 +50,6 @@
     border-radius: 10px
     font-size: 12px
     font-weight: 400
-
 
 .gym__title-mb-20
   margin-bottom: -20px
