@@ -53,6 +53,12 @@
 
 .gym__title-mb-20
   margin-bottom: -20px
+  @media (max-width: 374.5px)
+    margin-bottom: -10px
+
+.gym__title-small
+  @media (max-width: 374.5px)
+    font-size: 14px
 
 .gym__img
   position: relative
@@ -69,9 +75,17 @@
 
 .gym__img-text
   position: absolute
-  transform: translateY(250px)
+  transform: translateY(260px)
   transition: .5s ease
   cursor: default
+  @media (max-width: 499.5px)
+    font-size: 14px
+
+.gym__img-text-small
+  @media (max-width: 499.5px)
+    font-size: 12px
+  @media (max-width: 374.5px)
+    font-size: 10px
 
 .gym:hover .gym__title
   width: 100%
