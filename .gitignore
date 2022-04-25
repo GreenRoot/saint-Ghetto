@@ -1,3 +1,6 @@
+*.idea
+*.vscode
+
 #css and cdd.map
 *.css
 *.css.map

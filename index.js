@@ -40,7 +40,7 @@ for(let i = 0; i < trainingTitle.length; i++) {
 		}
 		trainingTitle[i].classList.add('active')
 		trainingImg[i].style.display = 'block'
-	})
+	}, {passive: true})
 }
 
 // Анимация цен на услуги
@@ -56,13 +56,13 @@ for(let i = 0; i < price.length; i++) {
 	price[i].addEventListener('click', () => {
 		removePriceHover()
 		price[i].classList.add('price-hover')
-	})
+	}, {passive: true})
 }
 // свайпы
 // Вешаем на прикосновение функцию handleTouchStart
-document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart, false);
+document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart,{passive: true});
 // А на движение пальцем по экрану - handleTouchMove
-document.getElementsByClassName('prices')[0].addEventListener('touchmove', handleTouchMove, false);
+document.getElementsByClassName('prices')[0].addEventListener('touchmove', handleTouchMove, {passive: true});
 
 let xDown = null;
 let yDown = null;
@@ -139,4 +139,4 @@ function activeLink() {
 	this.classList.add('active');
 }
 list.forEach((item) =>
-item.addEventListener('click', activeLink))
+item.addEventListener('click', activeLink, {passive: true}))
