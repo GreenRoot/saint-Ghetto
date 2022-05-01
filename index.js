@@ -43,6 +43,24 @@ for(let i = 0; i < trainingTitle.length; i++) {
 	}, {passive: true})
 }
 
+// Переключение цен
+const priceToggle = document.querySelectorAll('.price-toggle__botton')
+const prices = document.querySelectorAll('.prices')
+function activepriceToggle() {
+	priceToggle.forEach((item) => {
+		item.classList.remove('active');
+		prices.forEach((item) => {
+			item.classList.remove('active');
+		})
+	});
+	let temp = +this.getAttribute('data')
+	this.classList.add('active');
+	prices[temp].classList.add('active')
+	document.getElementsByClassName('price')[1].classList.add('price-hover')
+}
+priceToggle.forEach((item) => item.addEventListener('click', activepriceToggle, {passive: true}))
+
+
 // Анимация цен на услуги
 const price = document.getElementsByClassName('price')
 
@@ -59,10 +77,15 @@ for(let i = 0; i < price.length; i++) {
 	}, {passive: true})
 }
 // свайпы
-// Вешаем на прикосновение функцию handleTouchStart
-document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart,{passive: true});
-// А на движение пальцем по экрану - handleTouchMove
-document.getElementsByClassName('prices')[0].addEventListener('touchmove', handleTouchMove, {passive: true});
+
+function swipeReg() {
+	// Вешаем на прикосновение функцию handleTouchStart
+	document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart,{passive: true});
+	// А на движение пальцем по экрану - handleTouchMove
+	document.getElementsByClassName('prices ')[0].addEventListener('touchmove', handleTouchMove, {passive: true});
+}
+swipeReg()
+
 
 let xDown = null;
 let yDown = null;
