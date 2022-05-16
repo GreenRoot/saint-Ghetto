@@ -1,6 +1,8 @@
 *.idea
 *.vscode
 
+package-lock.json
+
 #css and cdd.map
 *.css
 *.css.map
