@@ -163,3 +163,13 @@ function activeLink() {
 }
 list.forEach((item) =>
 item.addEventListener('click', activeLink, {passive: true}))
+
+// coach card animation
+const coach = document.getElementsByClassName('coach')
+const coachArrow = document.getElementsByClassName('coach-arrow')
+
+for (let i = 0; i < coach.length; i++) {
+	coachArrow[i].addEventListener('click', () => {
+		coach[i].classList.toggle('active')
+	}, {passive: true})
+}
