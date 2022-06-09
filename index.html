@@ -511,6 +511,17 @@
 		</div>
 	</section>
 
+	<!--Инструкция-->
+	<div class="section p60">
+		<div class="container">
+			<h2 class="title pb30">Видео инструкция</h2>
+			<h3 class="subtitle pb30">Коротко рассказываем, что такое Фитнес-Шеринг</h3>
+			<div class="video">
+				<iframe width="900" height="600" src="https://www.youtube.com/embed/qRRAMriT-Ks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+
 	<!--Цены на аренду зала-->
 	<section id="price" class="section p60">
 		<div class="container price-p0">
@@ -525,7 +536,7 @@
 					<div class="price">
 						<div class="price-promo">До 15 Июня</div>
 						<div class="price__value">
-						
+
 							<!-- // Цены с промо -->
 							<span class="price__value-normal price__value-normal-a">550 ₽
 								<div class="price__value-normal-promo">750 ₽</div>
@@ -688,7 +699,7 @@
 											y2="12.5528" stroke-width="2" stroke-linecap="round" />
 									</svg>
 								</div>
-								<div class="price-includes__text">Расслабляющий дущ</div>
+								<div class="price-includes__text">Расслабляющий душ</div>
 							</div>
 						</div>
 						<a href="https://o1779.yclients.com/loyalty/subscription/377910" class="price__btn">Купить</a>
@@ -778,7 +789,7 @@
 											y2="12.5528" stroke-width="2" stroke-linecap="round" />
 									</svg>
 								</div>
-								<div class="price-includes__text">Расслабляющий дущ</div>
+								<div class="price-includes__text">Расслабляющий душ</div>
 							</div>
 						</div>
 						<a href="https://o1779.yclients.com/loyalty/subscription/380925" class="price__btn">Купить</a>
@@ -866,7 +877,7 @@
 											y2="12.5528" stroke-width="2" stroke-linecap="round" />
 									</svg>
 								</div>
-								<div class="price-includes__text">Расслабляющий дущ</div>
+								<div class="price-includes__text">Расслабляющий душ</div>
 							</div>
 						</div>
 						<a href="https://o1779.yclients.com/loyalty/subscription/380931" class="price__btn">Купить</a>
@@ -961,6 +972,7 @@
 			<div class="prices-info">
 				<p class="prices-info__text">
 					Как купить абонемент: - При нажатии на кнопку купить, Вас переадресует на страницу покупки  в <img height="14" width="15.5" style="transform: translateY(2.5px);" src="img/price/yclients-ico.png" alt="yclients">Yclients. В личном кабинете Вы сможете оплатить покупку абонемента. После успешной оплаты, абонемент будет отображён в вашем кабинете.
+					<br> <b>Срок действия сертификата один месяц!</b> <br> При бронировании тренировки, занятие можно отменить, <b>не раньше, чем за три часа до тренировки</b>
 				</p>
 			</div>
 		</div>
@@ -2141,6 +2153,15 @@
 			buttonText : 'Онлайн запись',
 			formPosition : 'right'
 		};
+	</script>
+	<script>
+		const bottom60 = () => {
+				document.getElementsByClassName('yButton bottom right')[0].style.bottom = '110px';
+				document.getElementsByClassName('yButton bottom right')[0].style.right = '10px';
+				document.getElementsByClassName('yButton bottom right')[0].classList.remove('bottom');
+				document.getElementsByClassName('yButton right')[0].classList.remove('right');
+		}
+		setInterval(bottom60, 1000)
 	</script>
 </body>
 </html>
