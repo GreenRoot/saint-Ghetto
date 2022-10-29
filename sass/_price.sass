@@ -59,8 +59,9 @@
     &.price-hover ~ .price
       transform: translateX(150px)
 
+
 @media (min-width: 991.5px)
-  .price:hover
+  .price:hover, .price.active
     position: relative
     transform: translateY(-10px)
     background-color: #ff5400
@@ -77,6 +78,8 @@
       color: #fff
     & .price-includes>.price-includes__text
       color: #fff
+
+
 
 .price-promo
   position: absolute
