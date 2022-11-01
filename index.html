@@ -527,6 +527,11 @@
 		<div class="container price-p0">
 			<h2 class="title pb30">Цены на аренду зала</h2>
 			<h3 class="subtitle pb30">Выбери лучшее предложение</h3>
+			<h3 id="timer" class="subtitle pb30">Цены поднимутся через: <span><b>
+				<span id="timerDays">7</span> <span id="last">дней</span>
+				<span id="timerHours">22</span>:<span id="timerMinutes">22</span>:<span id="timerSeconds">22</span>
+			</b></span></h3>
+			
 			<div class="price-toggle">
 				<div data="0" class="price-toggle__botton active">Без тренера</div>
 				<div data="1" class="price-toggle__botton">С тренером</div>
@@ -2495,5 +2500,6 @@
 		}
 		setInterval(bottom60, 1000)
 	</script>
+	<script type="module" src="timer.js"></script>
 </body>
 </html>

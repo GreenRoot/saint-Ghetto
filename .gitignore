@@ -1,3 +1,7 @@
+archive/
+archive*
+
+
 *.idea
 *.vscode
 
