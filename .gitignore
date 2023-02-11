@@ -1,6 +1,8 @@
 archive/
 archive*
 
+/psd/*
+
 
 *.idea
 *.vscode
