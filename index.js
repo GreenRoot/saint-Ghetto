@@ -44,7 +44,7 @@ for(let i = 0; i < trainingTitle.length; i++) {
 }
 
 // Переключение цен
-const priceToggle = document.querySelectorAll('.price-toggle__botton')
+const priceToggle = document.querySelectorAll('.price-toggle__button')
 const prices = document.querySelectorAll('.prices')
 function activepriceToggle() {
 	priceToggle.forEach((item) => {
