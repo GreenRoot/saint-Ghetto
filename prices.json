@@ -1,0 +1,86 @@
+[
+	{
+		"id": 0,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "580 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 8700 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "15 тренировок",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554817"
+	},
+	{
+		"id": 1,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "600 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 7200 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "12 тренировок",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554816"
+	},
+	{
+		"id": 2,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "610 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 6100 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "10 тренировок",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554815"
+	},
+	{
+		"id": 3,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "666 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 5328 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "8 тренировок",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554814"
+	},
+	{
+		"id": 4,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "680 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 3400 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "5 тренировок",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554813"
+	},
+	{
+		"id": 5,
+		"discount": false,
+		"oldPrice": "### р.",
+		"price": "700 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 2100 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "3 тренировки",
+		"link": "https://o1779.yclients.com/loyalty/subscription/554811"
+	},
+	{
+		"id": 6,
+		"discount": true,
+		"oldPrice": "900 р.",
+		"price": "799 р.",
+		"oldFullPrice": "### р.",
+		"fullPrice": "всего 7000 р.",
+		"min": "80 мин",
+		"cashBack": "кешбэк 10%",
+		"trainingSessions": "1 тренировка",
+		"link": "https://n725762.yclients.com/"
+	}
+]

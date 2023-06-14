@@ -1,37 +1,58 @@
 .alert
-  padding: 15px
-  position: fixed
-  bottom: 120px
-  left: 15px
-  width: 250px
-  background-color: #2b2831
-  border-radius: 10px
-  transition: .3s
-  z-index: 90
+	position: relative
+	padding: 15px
+	position: fixed
+	bottom: 120px
+	left: 15px
+	width: 270px
+	background-color: #2b2831
+	border-radius: 10px
+	transition: .3s
+	z-index: 90
 .alert__title
-  color: #fff
-  font-size: 20px
-  font-weight: 800
-  margin-bottom: 15px
+	color: #fff
+	font-size: 20px
+	font-weight: 800
+	margin-bottom: 15px
 .alert__text
-  color: #fff
-  font-size: 14px
+	color: #fff
+	font-size: 14px
 .alert-button
-  border: none
-  width: 100%
-  margin-top: 15px
-  font-size: 14px
-  color: #fff
-  background-color: #ff5400
-  border-radius: 20px
-  justify-self: baseline
-  padding: 10px 15px
-  font-weight: 800
-  transition: background-color .4s
-  cursor: pointer
+	display: inline-block
+	text-align: center
+	border: none
+	width: 100%
+	margin-top: 15px
+	margin-bottom: 15px
+	font-size: 14px
+	color: #fff
+	background-color: #ff5400
+	border-radius: 20px
+	justify-self: baseline
+	padding: 10px 15px
+	font-weight: 800
+	transition: background-color .4s
+	cursor: pointer
 .alert-button:hover
-  color: #fff
-  background-color: #ff5400be
+	color: #fff
+	background-color: #ff5400be
+.alert-close
+	position: absolute
+	display: flex
+	justify-content: center
+	align-items: center
+	top: 10px
+	right: 10px
+	width: 30px
+	height: 30px
+	border: none
+	border-radius: 50%
+	color: white
+	background-color: #39373f
+	transition: 0.2s
+	cursor: pointer
+.alert-close:hover
+	background-color: #2b2831
 .alert-hide
-  left: -260px
+	left: -280px
 

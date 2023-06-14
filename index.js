@@ -1,46 +1,114 @@
 import gsap from "gsap";
 
 // Анимация иконок в секции "Преимущества"
-gsap.to(".home-key-star", {rotation: '+=360', repeat: -1, transformOrigin: '50% 50%', duration: 2});
-gsap.to(".time-big-arrow", {rotation: '+=360', repeat: -1, transformOrigin: '0% 100%', duration: 3});
-gsap.to(".time-small-arrow", {rotation: '+=360', repeat: -1, duration: 2});
-gsap.to(".music-1", {y: '-5', repeat: -1, duration: 0.5, opacity: 0});
-gsap.to(".music-2", {y: '-5', repeat: -1, duration: 0.9, opacity: 0});
-gsap.to(".music-3", {y: '-5', repeat: -1, duration: 1.3, opacity: 0});
-gsap.to(".woman-social", {x: '-5', repeat: -1, duration: 3});
-gsap.to(".man-social", {x: '5', repeat: -1, duration: 3});
-gsap.to(".right-social", {x: '-15', repeat: -1, duration: 3});
-gsap.to(".left-social", {x: '15', repeat: -1, duration: 3});
-const tl = gsap.timeline({repeat: -1});
-tl.to(".social-1m", {opacity: 1, duration: 0});
-tl.to(".social-1m", {opacity: 0, duration: 0, delay: 1});
-tl.to(".social-2m", {opacity: 1, duration: 0});
-tl.to(".social-2m", {opacity: 0, duration: 0, delay: 1});
-tl.to(".social-3m", {opacity: 1, duration: 0});
-tl.to(".social-4m", {opacity: 0, duration: 0, delay: 1});
-gsap.to(".fitness-heart", {y: '-10', repeat: -1, duration: 2.8, opacity: 0});
-gsap.to(".message-1", {y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 0});
-gsap.to(".message-2", {y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 2});
-gsap.to(".message-3", {y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 4});
+gsap.to(".home-key-star", { rotation: '+=360', repeat: -1, transformOrigin: '50% 50%', duration: 2 });
+gsap.to(".time-big-arrow", { rotation: '+=360', repeat: -1, transformOrigin: '0% 100%', duration: 3 });
+gsap.to(".time-small-arrow", { rotation: '+=360', repeat: -1, duration: 2 });
+gsap.to(".music-1", { y: '-5', repeat: -1, duration: 0.5, opacity: 0 });
+gsap.to(".music-2", { y: '-5', repeat: -1, duration: 0.9, opacity: 0 });
+gsap.to(".music-3", { y: '-5', repeat: -1, duration: 1.3, opacity: 0 });
+gsap.to(".woman-social", { x: '-5', repeat: -1, duration: 3 });
+gsap.to(".man-social", { x: '5', repeat: -1, duration: 3 });
+gsap.to(".right-social", { x: '-15', repeat: -1, duration: 3 });
+gsap.to(".left-social", { x: '15', repeat: -1, duration: 3 });
+const tl = gsap.timeline({ repeat: -1 });
+tl.to(".social-1m", { opacity: 1, duration: 0 });
+tl.to(".social-1m", { opacity: 0, duration: 0, delay: 1 });
+tl.to(".social-2m", { opacity: 1, duration: 0 });
+tl.to(".social-2m", { opacity: 0, duration: 0, delay: 1 });
+tl.to(".social-3m", { opacity: 1, duration: 0 });
+tl.to(".social-4m", { opacity: 0, duration: 0, delay: 1 });
+gsap.to(".fitness-heart", { y: '-10', repeat: -1, duration: 2.8, opacity: 0 });
+gsap.to(".message-1", { y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 0 });
+gsap.to(".message-2", { y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 2 });
+gsap.to(".message-3", { y: '-15', repeat: -1, duration: 2, opacity: 0, repeatDelay: 4 });
 
 //
 // gsap.registerPlugin(DrawSVGPlugin);
 
+const cardPrice = {
+
+}
+/**
+data-card="5" []
+.n-card-cashback__cashback
+.n-card-cashback__oldprice
+.n-card-price__price
+.n-card-price__min
+.n-card-total__total
+.n-card-total__old
+.n-card-amount
+.n-card-button
+
+	"id": 0,
+	"discount": false,
+ 	"cashBack": "кешбэк 10%",
+	"oldPrice": "### р.",
+	"price": "580 р.",
+	"oldFullPrice": "### р.",
+	"fullPrice": "всего 8700 р.",
+	"min": "80 мин",
+
+	"trainingSessions": "15 тренировок",
+	"link": "https://n725762.yclients.com/"
+*/
+
+document.addEventListener('DOMContentLoaded', async function() {
+	await updateCards()
+});
+
+const updateCards = async () => {
+	const data = await fetchPrices();
+	renderCards(data)
+}
+
+const renderCards = (listCards) => {
+	const cardsElements = document.querySelectorAll('[data-card]');
+	for (const card of cardsElements) {
+		const cardId = card.getAttribute('data-card') * 1
+		const cardData = listCards.find(obj => obj.id === cardId);
+		const cardElements = {
+			oldPrice: card.querySelector(`.n-card-cashback__oldprice`),
+			price: card.querySelector(`.n-card-price__price`),
+			oldFullPrice: card.querySelector(`.n-card-total__old`),
+			fullPrice: card.querySelector(`.n-card-total__total`),
+			min: card.querySelector(`.n-card-price__min`),
+			cashBack: card.querySelector(`.n-card-cashback__cashback`),
+			trainingSessions: card.querySelector(`.n-card-amount`),
+			link: card.querySelector(`a.n-card-button`),
+			discount: card,
+		};
+		for (const cardCell in cardElements) {
+			const cardValue = cardData[cardCell];
+			const cardElement = cardElements[cardCell]
+			if (cardCell === "link") {cardElement.setAttribute('href', cardValue)}
+			else if (cardCell === "discount") {cardElement.setAttribute('data-discount', cardValue)}
+			else {cardElement.textContent = cardValue}
+		}
+	}
+	document.querySelector(`[data-loaded="false"]`).setAttribute('data-loaded', 'true')
+}
+const fetchPrices = async () => {
+	const res = await fetch('/prices.json');
+	const data = await res.json();
+	console.log(data)
+	return data;
+}
 
 // Табы видов тренировок
 
 const trainingImg = document.getElementsByClassName('training-img')
 const trainingTitle = document.getElementsByClassName('training-list__item')
 
-for(let i = 0; i < trainingTitle.length; i++) {
+for (let i = 0; i < trainingTitle.length; i++) {
 	trainingTitle[i].addEventListener('click', () => {
-		for(let i = 0; i < trainingTitle.length; i++) {
+		for (let i = 0; i < trainingTitle.length; i++) {
 			trainingTitle[i].classList.remove('active')
 			trainingImg[i].style.display = 'none'
 		}
 		trainingTitle[i].classList.add('active')
 		trainingImg[i].style.display = 'block'
-	}, {passive: true})
+	}, { passive: true })
 }
 
 // Переключение цен
@@ -58,111 +126,18 @@ function activepriceToggle() {
 	prices[temp].classList.add('active')
 	document.getElementsByClassName('price')[1].classList.add('price-hover')
 }
-priceToggle.forEach((item) => item.addEventListener('click', activepriceToggle, {passive: true}))
+priceToggle.forEach((item) => item.addEventListener('click', activepriceToggle, { passive: true }))
 
-
-// Анимация цен на услуги
-const price = document.getElementsByClassName('price')
-
-const removePriceHover = () => {
-	for(let i = 0; i < price.length; i++) {
-		price[i].classList.remove('price-hover')
-	}
-}
-
-for(let i = 0; i < price.length; i++) {
-	price[i].addEventListener('click', () => {
-		removePriceHover()
-		price[i].classList.add('price-hover')
-	}, {passive: true})
-}
-// свайпы
-
-function swipeReg() {
-	// Вешаем на прикосновение функцию handleTouchStart
-	document.getElementsByClassName('prices')[0].addEventListener('touchstart', handleTouchStart,{passive: true});
-	// А на движение пальцем по экрану - handleTouchMove
-	document.getElementsByClassName('prices ')[0].addEventListener('touchmove', handleTouchMove, {passive: true});
-}
-swipeReg()
-
-
-let xDown = null;
-let yDown = null;
-
-function handleTouchStart(evt) {
-	xDown = evt.touches[0].clientX;
-	yDown = evt.touches[0].clientY;
-}
-
-function handleTouchMove(evt) {
-	if ( ! xDown || ! yDown ) {
-		return;
-	}
-
-	let xUp = evt.touches[0].clientX;
-	let yUp = evt.touches[0].clientY;
-
-	let xDiff = xDown - xUp;
-	let yDiff = yDown - yUp;
-	// немного поясню здесь. Тут берутся модули движения по оси абсцисс и ординат
-	// (почему модули? потому что если движение сделано влево или вниз,
-	// то его показатель будет отрицательным) и сравнивается, чего было больше:
-	// движения по абсциссам или ординатам. Нужно это для того, чтобы, если пользователь провел вправо,
-	// но немного наискосок вниз, сработал именно коллбэк для движения вправо, а ни как-то иначе.
-
-	if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {
-		let priceHover = document.getElementsByClassName('price-hover')
-		if ( xDiff > 0 ) {
-			if (priceHover.length === 0) {
-				price[price.length - 2].classList.add('price-hover')
-			} else if (price[0].classList.contains('price-hover')) {
-				price[0].classList.remove('price-hover')
-				price[1].classList.add('price-hover')
-			} else if (price[1].classList.contains('price-hover')) {
-				price[1].classList.remove('price-hover')
-				price[2].classList.add('price-hover')
-			} else if (price[2].classList.contains('price-hover')) {
-				price[2].classList.remove('price-hover')
-				price[3].classList.add('price-hover')
-			} else if (price[3].classList.contains('price-hover')) {
-				price[3].classList.remove('price-hover')
-				price[0].classList.add('price-hover')
-			}
-			/* left swipe */
-		} else {
-			if (priceHover.length === 0) {
-				price[0].classList.add('price-hover')
-			} else if (price[3].classList.contains('price-hover')) {
-				price[3].classList.remove('price-hover')
-				price[2].classList.add('price-hover')
-			} else if (price[2].classList.contains('price-hover')) {
-				price[2].classList.remove('price-hover')
-				price[1].classList.add('price-hover')
-			} else if (price[1].classList.contains('price-hover')) {
-				price[1].classList.remove('price-hover')
-				price[0].classList.add('price-hover')
-			} else if (price[0].classList.contains('price-hover')) {
-				price[0].classList.remove('price-hover')
-				price[3].classList.add('price-hover')
-			}
-			/* right swipe */
-		}
-	}
-	/* reset values */
-	xDown = null;
-	yDown = null;
-}
 
 //анимация мобильного меню
 const list = document.querySelectorAll('.mobile-menu__list')
 function activeLink() {
 	list.forEach((item) =>
-	item.classList.remove('active'));
+		item.classList.remove('active'));
 	this.classList.add('active');
 }
 list.forEach((item) =>
-item.addEventListener('click', activeLink, {passive: true}))
+	item.addEventListener('click', activeLink, { passive: true }))
 
 // coach card animation
 const coach = document.getElementsByClassName('coach')
@@ -171,5 +146,5 @@ const coachArrow = document.getElementsByClassName('coach-arrow')
 for (let i = 0; i < coach.length; i++) {
 	coachArrow[i].addEventListener('click', () => {
 		coach[i].classList.toggle('active')
-	}, {passive: true})
+	}, { passive: true })
 }
