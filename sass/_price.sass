@@ -45,13 +45,16 @@
 .n-prices
 	flex-direction: column
 	width: auto
+	@media(max-width: 991.5px)
+		flex-direction: column-reverse
 .n-abon-wr
 	display: grid
 	grid-auto-flow: column
 	gap: 15px
 	padding: 0 15px
 	@media(max-width: 991.5px)
-		grid-auto-flow: row
+		display: flex
+		flex-direction: column-reverse
 .n-abon-delimiter
 	width: 1px
 	background-color: #3F3B46
@@ -156,6 +159,9 @@ a.n-card-button
 	color: #FFFFFF
 	margin-top: 15px
 	padding: 0 15px
+	@media(max-width: 991.5px)
+		margin-top: 0
+		margin-bottom: 30px
 .n-card-gorizontal
 	display: grid
 	grid-template-columns: 200px min-content min-content
