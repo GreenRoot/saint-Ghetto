@@ -76,7 +76,7 @@ const renderCards = (listCards) => {
 	document.querySelector(`[data-loaded="false"]`).setAttribute('data-loaded', 'true')
 }
 const fetchPrices = async () => {
-	const res = await fetch('/prices.json');
+	const res = await fetch('/prices.json?v020224');
 	const data = await res.json();
 	console.log(data)
 	return data;
