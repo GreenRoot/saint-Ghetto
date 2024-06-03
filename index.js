@@ -1,4 +1,13 @@
 import gsap from "gsap";
+// import Swiper JS
+import Swiper from 'swiper';
+// import Swiper styles
+import 'swiper/swiper.css';
+
+const swiper = new Swiper('.swiper', {
+	// Optional parameters
+	direction: 'horizontal',
+});
 
 // Анимация иконок в секции "Преимущества"
 gsap.to(".time-big-arrow", { rotation: '+=360', repeat: -1, transformOrigin: '0% 100%', duration: 3 });
@@ -76,7 +85,7 @@ const renderCards = (listCards) => {
 	document.querySelector(`[data-loaded="false"]`).setAttribute('data-loaded', 'true')
 }
 const fetchPrices = async () => {
-	const res = await fetch('/prices.json?v020224');
+	const res = await fetch('/prices.json?v011');
 	const data = await res.json();
 	console.log(data)
 	return data;

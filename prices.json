@@ -7,7 +7,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 9490 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "15 тренировок",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554817"
 	},
@@ -19,7 +19,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 7790 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "12 тренировок",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554816"
 	},
@@ -27,11 +27,11 @@
 		"id": 2,
 		"discount": false,
 		"oldPrice": "### р.",
-		"price": "639 р.",
+		"price": "659 р.",
 		"oldFullPrice": "### р.",
-		"fullPrice": "всего 6390 р.",
+		"fullPrice": "всего 6590 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "10 тренировок",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554815"
 	},
@@ -43,7 +43,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 5690 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "8 тренировок",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554814"
 	},
@@ -55,7 +55,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 3840 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "5 тренировок",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554813"
 	},
@@ -67,7 +67,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 2420 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "3 тренировки",
 		"link": "https://o1779.yclients.com/loyalty/subscription/554811"
 	},
@@ -79,7 +79,7 @@
 		"oldFullPrice": "### р.",
 		"fullPrice": "всего 820 р.",
 		"min": "70 мин",
-		"cashBack": "кешбэк 10%",
+		"cashBack": "кешбэк 5%",
 		"trainingSessions": "1 тренировка",
 		"link": "https://n725762.yclients.com/"
 	}

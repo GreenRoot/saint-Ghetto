@@ -1,0 +1,142 @@
+.feedback-title
+  align-items: center
+  gap: 15px
+  display: grid
+  grid-auto-flow: column
+  grid-auto-columns: max-content
+  margin-bottom: 20px
+
+.feedback-title__company
+  display: flex
+  align-items: flex-start
+
+.summary-divider
+  height: 1px
+  width: 100%
+  margin: 30px 0
+  background-color: #ccc
+
+.summary-rating
+  display: flex
+  align-items: center
+  height: 98px
+  width: fit-content
+  padding: 0 66px 0 26px
+  background-color: #f6f6f6
+  border-radius: 8px
+  margin-bottom: 24px
+  &__rating
+    font-size: 56px
+    font-weight: 600
+    color: #4d4d4d
+  &__stars-and-count
+    display: flex
+    flex-direction: column
+    margin-left: 18px
+
+.summary-post
+  font-family: Roboto, 'sans-serif'
+  display: inline-flex
+  gap: 4px
+  align-items: center
+  height: 40px
+  padding: 0 12px
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.2)
+  color: black
+  border-radius: 12px
+  margin-right: 12px
+  font-weight: 600
+  &__icon
+    height: 16px
+  &__title
+    height: 16px
+
+.summary-title
+  display: block
+  font-family: Roboto, 'sans-serif'
+  font-size: 20px
+  font-weight: 600
+  margin-bottom: 24px
+
+.summary-aspect
+  font-family: Roboto, 'sans-serif'
+  display: flex
+  gap: 8px
+  margin-bottom: 24px
+
+.summary-aspect-card
+  display: flex
+  flex-direction: column
+  justify-content: center
+  background-color: #f6f6f6
+  border-radius: 8px
+  height: 56px
+  width: max-content
+  padding: 0 12px
+  cursor: default
+  transition: background-color .2s
+  &:hover
+    background-color: #e5e4e4
+
+.summary-aspect-card-header
+  display: flex
+  font-weight: 500
+  &__assessment
+    margin-left: 1px
+    font-weight: 500
+    color: #3cb200
+
+.summary-aspect-card-count
+  padding-top: 4px
+  font-size: 12px
+  color: #878787
+
+.review-view
+  font-family: Roboto, 'sans-serif'
+
+.review-view-card
+  max-width: 700px
+  margin-bottom: 32px
+  &:last-child
+    margin-bottom: 0
+
+.review-view-card-author
+  display: flex
+  align-items: center
+  gap: 12px
+  margin-bottom: 16px
+
+  &__avatar-name
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 40px
+    width: 40px
+    border-radius: 50%
+    font-size: 16px
+    color: white
+    background-color: #f285aa
+  &__name
+    font-size: 16px
+    font-weight: 500
+  &__status
+    color: #878787
+
+.review-view-card-rating
+  display: flex
+  align-items: center
+  gap: 12px
+  margin-bottom: 16px
+  &__date
+    font-size: 12px
+    color: #878787
+
+.review-view-card-text
+  margin-bottom: 16px
+
+.review-view-card-link
+  color: #878787
+  transition: color .3s
+  &:hover
+    color: #545454
+
